@@ -1,0 +1,13 @@
+# Pinned upstream toolchain for the Pulseq -> pulseg -> pge2 GE workflow.
+# Format:  <name> <git-url> <commit-sha> <human-readable-ref>
+# ./setup.sh clones each repo into libs/<name> and checks out <commit-sha>.
+# To re-pin, edit the sha by hand and re-run ./setup.sh.
+# examples (GE sequence examples) is reference only and is not put on the MATLAB path.
+#
+# PulCeq is deliberately absent: it ships an older +pge2 package whose
+# check/validate/plot signatures conflict with pge2. Do not put both on the MATLAB path.
+
+pulseq   https://github.com/pulseq/pulseq.git                     84ea72603208bdbe442950e6661b155fc4d37311  v1.5.1
+pulseg   https://github.com/HarmonizedMRI/pulseg.git              ca2a278a4160f859f1009812dcda86b783a3f3a1  main
+pge2     https://github.com/HarmonizedMRI/pge2.git                9fa76e60e65a92325e51a0c98f0302e3a805d960  main
+examples https://github.com/HarmonizedMRI/SequenceExamples-GE.git 3c23853693eb9198a931d816266fd209365b4e6f  main
